@@ -4,11 +4,10 @@ import Products from './components/Shop/Products';
 import {useSelector} from 'react-redux';
 
 function App() {
-  const showcart=useSelector(state=>state.toggle);
- 
+  const cartShow=useSelector(state=>state.toggle);
   return (
     <Layout>
-      {showcart && <Cart />}
+      {cartShow && <Cart />}
       <Products />
     </Layout>
   );
